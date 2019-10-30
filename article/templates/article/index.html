@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% load static %}
+{% block content %}
+
+
+
+리포터이름을 출력할거야
+
+
+ {% if reporter_list %}
+    {% for reporter_name in reporter_list%}
+    <div> {{ reporter_name }}</div>
+    {% endfor%}
+ {% else %}
+    <div></div>
+ {% endif %}
+
+<a href="http://google.com" class="link">구</a>
+
+<input type="button" value="fetch" onclick="alert('hi')">
+
+<div class="menu" >
+    <div class="menu-item">111111111</div>
+    <div class="menu-item">22222222</div>
+    <div class="menu-item">33333333</div>
+    <div class="menu-item">4444444</div>
+    <div class="menu-item">555555555</div>
+    <div class="menu-item">66666666</div>
+</div>
+
+
+<script src="{% static 'js/script_ajax.js' %}"></script>
+{% endblock %}
